@@ -7,6 +7,9 @@
     <loc>https://r-spatial.github.io/rgee//reference/Map.html</loc>
   </url>
   <url>
+    <loc>https://r-spatial.github.io/rgee//reference/R6Map.html</loc>
+  </url>
+  <url>
     <loc>https://r-spatial.github.io/rgee//reference/ee.html</loc>
   </url>
   <url>
@@ -44,9 +47,6 @@
   </url>
   <url>
     <loc>https://r-spatial.github.io/rgee//reference/ee_gcs_to_local.html</loc>
-  </url>
-  <url>
-    <loc>https://r-spatial.github.io/rgee//reference/ee_get.html</loc>
   </url>
   <url>
     <loc>https://r-spatial.github.io/rgee//reference/ee_get_assethome.html</loc>
@@ -112,6 +112,9 @@
     <loc>https://r-spatial.github.io/rgee//reference/ee_users.html</loc>
   </url>
   <url>
+    <loc>https://r-spatial.github.io/rgee//reference/ee_utils_cog_metadata.html</loc>
+  </url>
+  <url>
     <loc>https://r-spatial.github.io/rgee//reference/ee_utils_create_json.html</loc>
   </url>
   <url>
@@ -121,28 +124,19 @@
     <loc>https://r-spatial.github.io/rgee//reference/ee_utils_create_manifest_table.html</loc>
   </url>
   <url>
+    <loc>https://r-spatial.github.io/rgee//reference/ee_utils_dataset_display.html</loc>
+  </url>
+  <url>
     <loc>https://r-spatial.github.io/rgee//reference/ee_utils_future_value.html</loc>
   </url>
   <url>
     <loc>https://r-spatial.github.io/rgee//reference/ee_utils_get_crs.html</loc>
   </url>
   <url>
-    <loc>https://r-spatial.github.io/rgee//reference/ee_utils_gif_annotate.html</loc>
-  </url>
-  <url>
-    <loc>https://r-spatial.github.io/rgee//reference/ee_utils_gif_creator.html</loc>
-  </url>
-  <url>
-    <loc>https://r-spatial.github.io/rgee//reference/ee_utils_gif_save.html</loc>
-  </url>
-  <url>
     <loc>https://r-spatial.github.io/rgee//reference/ee_utils_py_to_r.html</loc>
   </url>
   <url>
     <loc>https://r-spatial.github.io/rgee//reference/ee_utils_pyfunc.html</loc>
-  </url>
-  <url>
-    <loc>https://r-spatial.github.io/rgee//reference/ee_utils_search_display.html</loc>
   </url>
   <url>
     <loc>https://r-spatial.github.io/rgee//reference/ee_utils_shp_to_zip.html</loc>
@@ -163,7 +157,7 @@
     <loc>https://r-spatial.github.io/rgee//reference/local_to_gcs.html</loc>
   </url>
   <url>
-    <loc>https://r-spatial.github.io/rgee//reference/null-default.html</loc>
+    <loc>https://r-spatial.github.io/rgee//reference/map-operator.html</loc>
   </url>
   <url>
     <loc>https://r-spatial.github.io/rgee//reference/pipe.html</loc>

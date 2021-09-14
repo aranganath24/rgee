@@ -52,8 +52,6 @@
 
 
 
-
-
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -81,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rgee</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.8.9999</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.1</span>
       </span>
     </div>
 
@@ -89,7 +87,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa-home"></span>
+    <span class="fa fa-home"></span>
      
   </a>
 </li>
@@ -120,21 +118,21 @@
 </li>
 <li>
   <a href="../news/index.html">
-    <span class="fas fa-newspaper-o"></span>
+    <span class="fa fa-newspaper-o"></span>
      
     news
   </a>
 </li>
 <li>
   <a href="../reference/index.html">
-    <span class="fas fa-file-code-o"></span>
+    <span class="fa fa-file-code-o"></span>
      
     functions
   </a>
 </li>
 <li>
   <a href="https://github.com/r-spatial/rgee/">
-    <span class="fas fa-github fa-lg"></span>
+    <span class="fa fa-github fa-lg"></span>
      
     github
   </a>
@@ -156,13 +154,70 @@
       <small>Source: <a href='https://github.com/r-spatial/rgee/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="rgee-1089999" class="section level1">
-<h1 class="page-header" data-toc-text="1.0.8.9999">
-<a href="#rgee-1089999" class="anchor"></a>rgee 1.0.8.9999<small> Unreleased </small>
+    <div id="rgee-111" class="section level1">
+<h1 class="page-header" data-toc-text="1.1.1">
+<a href="#rgee-111" class="anchor"></a>rgee 1.1.1<small> Unreleased </small>
 </h1>
 <ul>
-<li>Fix a bug in <code>ee_extract</code> that changes names in column names when starts with numbers (<a href='https://github.com/r-spatial/rgee/issues/119'>#119</a>, thanks <a href='https://github.com/joshualerickson'>@joshualerickson</a>).</li>
+<li>Deprecated.R file deleted.</li>
+<li>ee_help Rstudio addin critical bug solved.</li>
+<li>ee_clean argument name changed to ‘user’ rather than ‘email’.</li>
+<li>New test inside ee_Initialize checks if the user token has enough permissions to read or modify files from GD.</li>
+<li>DESCRIPTION file modified: rgee always must use googledrive 2.0.0&gt;=</li>
+<li>rstudioapi package moved from Suggests to Imports.</li>
+</ul>
+</div>
+    <div id="rgee-110" class="section level1">
+<h1 class="page-header" data-toc-text="1.1.0">
+<a href="#rgee-110" class="anchor"></a>rgee 1.1.0<small> 2021-08-10 </small>
+</h1>
+<ul>
+<li>re-coded the Map and R6Map modules to simplify the maintenance. Many bugs were solved.</li>
+<li>ee_utils_get_crs now call to the web.archive.org if spatialreference is shut down.</li>
+<li>Math module and subsetting module were migrated to <a href="https://github.com/r-earthengine/rgeeExtra">rgeeExtra</a>.</li>
+<li>In ee_Initialize, the “email” parameter was renamed to “user”.</li>
+<li>ee_get is now an internal function of rgee. A new/faster version of ee_get is available in rgeeExtra.</li>
+<li>Support to display COG resources. See Map or R6Map examples.</li>
+<li>rgee now supports googledrive version 2.0.0.</li>
+<li>Obtain COG metadata (<code>ee_utils_cog_metadata</code>).</li>
+<li>New test unit tests.</li>
+<li>Solve a bug in <code>ee_help</code>.</li>
+<li>
+<code>Map$addLegend</code> supports categorical legends in leaflet interactive maps.</li>
+<li>New logos :)</li>
+</ul>
+</div>
+    <div id="rgee-109" class="section level1">
+<h1 class="page-header" data-toc-text="1.0.9">
+<a href="#rgee-109" class="anchor"></a>rgee 1.0.9<small> 2021-04-24 </small>
+</h1>
+<ul>
+<li>Accessing the Earth Engine Data Catalog via ‘$’ thanks to the <a href="https://github.com/samapriya/Earth-Engine-Datasets-List">Earth-Engine-Datasets-List</a> created and supported by <a href="https://github.com/samapriya">@samapriya</a>.</li>
+<li>Math functions (abs, sign, sqrt, ceiling, cummax, cummin, cumprod, cumsum, log, log10, log1p, acos, floor, asin, atan, exp, expm1, cos, cosh, sin, sinh, tan, and tanh.) to <code>ee$Image</code>.</li>
+<li>Summary functions (max, mean, min, range, sum, product) to <code>ee$Image</code>.</li>
+<li>Comparison operators (==, !=, &gt;, &lt;, &lt;=, &gt;=) to <code>ee$Image</code>.</li>
+<li>Logic operators (!, &amp;, |) to <code>ee$Image</code>.</li>
+<li>Arithmetic operators (+, -, *, /, ^, %%, %/%) to <code>ee$Image</code>.</li>
+<li>Subsetting operators (‘[[&lt;-’, ‘[[’) to <code>ee$Image</code> and <code>ee$ImageCollection</code>.</li>
+<li>GH Action to automatically updated the Earth Engine Python API.</li>
+<li>
+<code><a href="../reference/ee_as_sf.html">ee_as_sf(..., via = "getInfo")</a></code> does not write in temp folder.</li>
+<li>
+<code>ee_as_sf</code> now returns by default a GeoJSON instead of a ESRI shapefile.</li>
+<li>When EarthEngineMaps have the same name, a random hex string is added to the second map.</li>
+<li>Fix a bug in <code>sf_as_ee</code> that add <code>id</code> column to the results.</li>
+<li>
+<code>ee_extract</code> now supports lazy evaluation and containers <code>drive</code> and <code>gcs</code>.</li>
+<li>R6, class to display Earth Engine (EE) spatial objects, added.</li>
+<li>Map is now a <code>R6</code> object instead of a environment.</li>
+<li>Vignettes documentation upgrade.</li>
+<li>
+<code>ee_install_set_pyenv</code> support local .Renviron.</li>
+<li>Fix a bug for new tokens in {googledrive} <a href='https://github.com/r-spatial/rgee/issues/139'>#139</a>.</li>
+<li>Fix a bug in ee_print that sometimes make see the warning: <em>ee_utils_py_to_r(.) : restarting interrupted promise evaluation</em>.</li>
 <li>Fix a bug in <code>ee_install_set_pyenv</code> when py_env=NULL (<a href='https://github.com/r-spatial/rgee/issues/118'>#118</a>, thanks <a href='https://github.com/MatthieuStigler'>@MatthieuStigler</a>).</li>
+<li>GH Action test-coverage removed.</li>
+<li>Fix a bug in <code>ee_extract</code> that changes column names when starts with numbers (<a href='https://github.com/r-spatial/rgee/issues/119'>#119</a>, thanks <a href='https://github.com/joshualerickson'>@joshualerickson</a>).</li>
 </ul>
 </div>
     <div id="rgee-108" class="section level1">
@@ -174,7 +229,7 @@
 <li>Fix a bug in Map$addLayer(…, legend=TRUE) when <code>eeobject</code> is an constant image (i.e. ee$Image(0)).</li>
 <li>Stop message in <code>ee_Initialize</code> to does not allow the use of rgee when the folder “…/rgee/python/” does not exist.</li>
 <li>Info messages when rgee make changes to.Renviron.</li>
-<li>Earth Engine Python API test updated to 0.1.247.</li>
+<li>Earth Engine Python API updated to 0.1.247.</li>
 </ul>
 </div>
     <div id="rgee-107" class="section level1">
@@ -232,7 +287,7 @@
 </h1>
 <ul>
 <li>Important changes in the low level API to upload raster and vector with GCS. However, high upload API (<code>sf_as_ee</code>, <code>stars_as_ee</code>, and <code>raster_as_ee</code>) continue working in the same way.</li>
-<li>Add the functions: <code>ee_utils_create_manifest_image</code> and <code>ee_utils_create_manifest_table</code> to help users to create a JSON file with all the upload parameters (“manifest”, see https://developers.google.com/earth-engine/image_manifest/).</li>
+<li>Add the functions: <code>ee_utils_create_manifest_image</code> and <code>ee_utils_create_manifest_table</code> to help users to create a JSON file with all the upload parameters (“manifest”, see <a href="https://developers.google.com/earth-engine/image_manifest/" class="uri">https://developers.google.com/earth-engine/image_manifest/</a>).</li>
 <li>Add the functions: <code>ee_utils_gif_creator</code>, <code>ee_utils_gif_annotate</code> and <code>ee_utils_gif_save</code> to help users to read, add text, and save gif files.</li>
 <li>New | operator inspired in mapview 2.9.0! try: m4 | m5</li>
 <li>Fix several typos.</li>
@@ -246,7 +301,7 @@
 <ul>
 <li>Add <code>ee_help</code> a new Rstudio addins that mimics the help Rstudio interface (F1).</li>
 <li>Fix a bug that makes that <code>ee_as_sf</code> only supports <code>GeoJSON</code> format.</li>
-<li>If <code>dsn</code> is not specified in <code>ee_as_sf</code>, it will create a temporary shapefile (in dir).</li>
+<li>If <code>dsn</code> is not specified in <code>ee_as_sf</code>, it will create a temporary shapefile (in \tmp dir).</li>
 <li>Fix a bug in <code>ee_imagecollection_to_local</code> (<a href='https://github.com/r-spatial/rgee/issues/87'>#87</a> Thanks <a href='https://github.com/cedlfc44'>@cedlfc44</a>)</li>
 <li>Fix a bug in <code>ee_image_local</code> (<a href='https://github.com/r-spatial/rgee/issues/88'>#88</a> Thanks <a href='https://github.com/cedlfc44'>@cedlfc44</a>)</li>
 <li>Fix a bug in <code>ee_create_credentials_drive</code> (<a href='https://github.com/r-spatial/rgee/issues/90'>#90</a> <a href='https://github.com/r-spatial/rgee/issues/78'>#78</a> Thanks <a href='https://github.com/cedlfc44'>@cedlfc44</a>)</li>
@@ -389,7 +444,7 @@
 </h1>
 <ul>
 <li>Fix a bug in ee_check_python_packages.</li>
-<li>changed by in the documentation.</li>
+<li>\donttest changed by \dontrun in the documentation.</li>
 <li>gdal and v8 system dependencies added to GH actions.</li>
 <li>Fix a bug in the paper (<code>ee_extract</code> example).</li>
 <li>Fix a minor bug in <code>ee_extract</code>, now the argument … works.</li>
@@ -410,7 +465,7 @@
 <li>DESCRIPTION: single quotes in title and description.</li>
 <li>DESCRIPTION: A more compressible description of what rgee does.</li>
 <li>DESCRIPTION: Added web reference to the Earth Engine API.</li>
-<li>changed by in all our examples.</li>
+<li>\dontrun changed by \donttest in all our examples.</li>
 <li>Added “#’ <a href='https://github.com/return'>@return</a>” to several functions.</li>
 <li>Added “#’ <a href='https://github.com/family'>@family</a>” to all the functions.</li>
 <li>Added ‘quiet’ argument to all the functions that needed.</li>
@@ -473,7 +528,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
